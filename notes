@@ -1,0 +1,22 @@
+setting virtualenv (fixing issues)  WIDNOWS 
+
+
+md /opt/pypi/downloads
+
+cd /opt/pypi/downloads
+
+pip download --no-cache --proxy http:// setuptools wheel pip
+
+back to project dir
+
+virtualenv --no-download --extra-search-dir /opt/pypi/downloads venv
+
+
+
+setting virtualenv (fixing issues) LINUX 
+
+mkdir -p /opt/pypi/downloads    
+pushd /opt/pypi/downloads
+pip download --no-cache --proxy http://proxy:3128 setuptools wheel pip
+popd
+virtualenv --no-download --extra-search-dir /opt/pypi/downloads virtualenv
