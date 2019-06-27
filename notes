@@ -20,3 +20,7 @@ pushd /opt/pypi/downloads
 pip download --no-cache --proxy http://proxy:3128 setuptools wheel pip
 popd
 virtualenv --no-download --extra-search-dir /opt/pypi/downloads virtualenv
+
+
+
+git config --global http.proxy http://proxyuser:proxypwd@proxy.server.com:8080
